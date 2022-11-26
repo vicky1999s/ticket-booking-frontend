@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import Buses from './component/Buses/Buses';
+import Main from './component/Main/Main';
+import Details from './component/PassengerDetails/Details';
+import { Route, Routes } from 'react-router-dom'
+import { MainContextProvider } from './context/MainContext';
+import { BusContextProvider } from './context/BusContext';
+import SuccessPage from './component/SuccessPage/SuccessPage';
+import Header from './component/Header/Header';
 
 function App() {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Header></Header>
+    <MainContextProvider>
+      <BusContextProvider>
+        <Routes>
+          <Route path='/' element={<Main />} ></Route>
+          <Route path='/buses' element={<Buses />} ></Route>
+          <Route path='/details' element={<Details />} ></Route>
+          <Route path='/success' element={<SuccessPage />} ></Route>
+        </Routes>
+      </BusContextProvider>
+    </MainContextProvider>
+    </>
   );
 }
 

@@ -1,0 +1,103 @@
+.passengers_form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 100px;
+    
+}
+
+
+.passenger_detail{
+    margin: 15px 15px;
+    width: 400px;
+    height: 180px;
+    box-shadow: 0px 0px 5px rgb(0, 0, 0, 0.6);
+    padding: 20px;
+    color: grey;
+    position: relative;
+}
+
+.passenger{
+    color: black;
+    font-weight: 500;
+    font-size: large;
+}
+
+.name_block{
+    padding: 5px;
+}
+
+.name_block>label{
+    display: block;
+}
+
+.name_block>input{
+    margin-top: 10px;
+    width: 93%;
+    outline: none;
+    padding: 8px;
+    border: 1px solid rgb(0, 0, 0, 0.2);
+    margin-bottom: 15px;
+}
+
+.second_block{
+    display: flex;
+    justify-content: space-between;
+}
+
+.radio_block{
+    width: 40%;
+
+}
+
+.radio_options{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.option{
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.option>input{
+    height: 15px;
+    width: 15px;
+}
+
+.age_block{
+    width: 30%;
+}
+
+.age_block>input{
+    margin-top: 10px;
+    width: 80%;
+    padding: 6px 4px;
+    border: 1px solid rgb(0, 0, 0, 0.2);
+    outline: none;
+}
+
+.age_block>input::placeholder, .name_block>input::placeholder{
+    color: rgb(128, 128, 128, 0.5);
+}
+
+
+.btn{
+    background-color: #d84e55;
+    color: #FFF;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 400;
+    border: 0px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.submit_btn{
+    position: fixed;
+    left: 45%;
+    bottom: 20px;
+}
