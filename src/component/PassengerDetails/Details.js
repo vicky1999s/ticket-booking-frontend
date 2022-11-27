@@ -14,8 +14,6 @@ const Details = () => {
 
     const reduceNoOfSeats = async () => {
         busDetail.seats_available = busDetail.seats_available-totalSeats;
-        console.log(HOST_URL+'bus/'+busDetail._id);
-        console.log(JSON.stringify(busDetail));
         const response = await fetch(HOST_URL+'bus/'+busDetail._id, {
             method: "post",
             headers: {
@@ -24,7 +22,6 @@ const Details = () => {
             body: JSON.stringify(busDetail)
         })
         const res = await response.json()
-        console.log(res)
     }
 
     const handleOnSubmit = (e) => {

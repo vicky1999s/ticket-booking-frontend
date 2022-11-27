@@ -7,7 +7,6 @@ import './Bus.css'
 const Buses = () => {
     const {source, destination} = useMainContext()
     const {buses, setBuses} = useBusContext()
-    console.log(buses)
     const default_bus = {
       travels_name: "Default",
       departure_time: "01:00",
@@ -36,9 +35,7 @@ const Buses = () => {
           (<Bus key={default_bus.travels_name} bus={default_bus}/>)
           :
           (
-           buses.map((bus)=>{
-            console.log(bus)
-              
+           buses.map((bus)=>{      
                 return <Bus key={bus.travels_name} bus={bus}/>
               })
             

@@ -24,16 +24,13 @@ const Main = () => {
     }
 
     const getBusDetails = async () => {
-        console.log(HOST_URL)
         const url = new URL(HOST_URL+'bus')
         const params = {source: source, destination: destination};
         url.search = new URLSearchParams(params).toString();
-        console.log(url)
         const result = await fetch(url);
         const busData = await result.json();
 
         setBuses(busData)
-        console.log(busData)
         return busData;
     }
 

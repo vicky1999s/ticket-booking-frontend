@@ -2,10 +2,6 @@ import React from 'react'
 import "./PassengerDetail.css";
 
 const PassengerDetail = ({val}) => {
-    // const [passengerList, setPassengerList] = useState(1);
-    // const handleOnSubmit = (e) => {
-    //     console.log(e)
-    // }
   return (
     <div className='passenger_detail'>
         <div className='passenger'>Passenger {val}</div>

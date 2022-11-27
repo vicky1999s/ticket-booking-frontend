@@ -27,11 +27,9 @@ const SuccessPage = () => {
                 alert("Email already sent")
         })();
         setEmailAlreadySent(false);
-        console.log(e);
     }
 
     const sendEmail = async (e) => {
-        console.log(e.target[0].value)
         const data = {
             email_id: e.target[0].value,
             travels_name: busDetail.travels_name,
@@ -53,7 +51,6 @@ const SuccessPage = () => {
         })
 
         const ret = await response.json()
-        console.log(ret)
     }
 
   return (
