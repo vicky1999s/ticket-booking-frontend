@@ -24,6 +24,7 @@ const Main = () => {
     }
 
     const getBusDetails = async () => {
+        console.log(HOST_URL)
         const url = new URL(HOST_URL+'bus')
         const params = {source: source, destination: destination};
         url.search = new URLSearchParams(params).toString();
