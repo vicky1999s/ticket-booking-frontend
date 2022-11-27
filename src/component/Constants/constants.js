@@ -1,2 +1,2 @@
 
-export const HOST_URL = 'https://bus-ticket-booking-backend.herokuapp.com/';
+export const HOST_URL = process.env.HOST_URL
