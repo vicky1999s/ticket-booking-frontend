@@ -40,7 +40,7 @@ const Main = () => {
   
     useEffect(()=>{
         const getLocationNames = async () => {
-            const response = await fetch(HOST_URL+'location')
+            const response = await fetch(HOST_URL+'locations')
             const data = await response.json()
             setLocationNames(data)
         }
